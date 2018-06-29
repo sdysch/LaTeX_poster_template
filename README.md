@@ -1,4 +1,4 @@
-#Template for poster making in LaTeX
+# Template for poster making in LaTeX
 
 - Uses baposter style [here](https://github.com/mloesch/baposter/blob/master/baposter.cls)
 - Most of the template has been adapted from an example provided from the above!

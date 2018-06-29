@@ -1,0 +1,75 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a1paper,portrait,10pt]{baposter}
+\usepackage[font=small,labelfont=bf]{caption} 
+\usepackage{booktabs} 
+\usepackage{relsize} 
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumitem, subfigure} 
+
+\setlist[itemize]{leftmargin=*}
+
+\graphicspath{{plots/}} 
+
+\definecolor{bordercol}{RGB}{40,40,40} % Border color of content boxes
+\definecolor{headercol1}{RGB}{230,230,250} % Background color for the header in the content boxes (left side)
+\definecolor{headercol2}{RGB}{230,230,250} % Background color for the header in the content boxes (right side)
+\definecolor{headerfontcol}{RGB}{0,0,0} % Text color for the header text in the content boxes
+\definecolor{boxcolor}{RGB}{255,255,255} % Background color for the content in the content boxes
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{lightmauve}{rgb}{0.86, 0.82, 1.0}
+
+\definecolor{bkgColor1}{rgb}{0.1, 0.1, 0.25}
+\definecolor{bkgColor2}{rgb}{0.1, 0.1, 0.25}
+
+
+\begin{document}
+
+\begin{poster}{
+grid=false,
+borderColor=bordercol, % Border color of content boxes
+headerColorOne=green!20, % Background color for the header in the content boxes (left side)
+headerColorTwo=green!20, % Background color for the header in the content boxes (right side)
+headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+boxColorOne=boxcolor, % Background color for the content in the content boxes
+headershape=smallrounded, % Specify the rounded corner in the content box headers
+headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+textborder=roundedsmall,
+background=shadetb,
+bgColorOne=lightmauve,
+bgColorTwo=babyblue,
+headerborder=closed, % Change to closed for a line under the content box headers
+headerheight=0.1\textheight,
+columns=4
+}
+{\includegraphics[scale=0.1]{Manc.png}} % University/lab logo
+%
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR NAME
+%----------------------------------------------------------------------------------------
+%
+{ \bf  \huge {Poster title goes here} } % Poster title
+{\smaller Author name (author email)  \\  
+\smaller {University} \\
+ {Conference name?}}
+{\includegraphics[scale=0.2]{ATLAS_logo.png}}
+
+%----------------------------------------------------------------------------------------
+%     Main poster content
+%----------------------------------------------------------------------------------------
+
+\headerbox{Example block}{name=example,column=2,span=2}{
+\begin{itemize}
+	\item Some text
+\end{itemize}
+}
+
+\headerbox{Example 2}{name=introduction,column=0, span=2, bottomaligned=example}{
+\begin{itemize}
+\item More text
+\end{itemize}
+}
+\end{poster}
+
+\end{document}
